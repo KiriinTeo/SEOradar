@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "target_url": "http://127.0.0.1:8099/index.html",
+    "normalized_url": "http://127.0.0.1:8099/index.html",
+    "analyzed_at_utc": "2026-08-15T13:21:31.230947+00:00",
+    "tool_version": "1.0.0",
+    "total_duration_ms": 134.09
+  },
+  "overall_status": "warning",
+  "seo": {
+    "score": 70,
+    "grade": "C",
+    "meta_tags": {
+      "title": "Test Site For Analyzer Tool Demo",
+      "title_length": 32,
+      "title_status": "ok",
+      "description": "This is a demo test page used to validate the SEO and Security analyzer tool end to end.",
+      "description_length": 88,
+      "description_status": "ok",
+      "canonical_url": "http://localhost:8099/index.html",
+      "canonical_status": "ok",
+      "open_graph": {
+        "title": "Test Site",
+        "description": "Demo page"
+      },
+      "open_graph_status": "warning",
+      "twitter_card": {},
+      "twitter_card_status": "warning",
+      "checks": [
+        {
+          "id": "title.length",
+          "label": "Title Length",
+          "status": "ok",
+          "message": "Title length (32 chars) is within the ideal 30-60 char range.",
+          "details": null
+        },
+        {
+          "id": "description.length",
+          "label": "Description Length",
+          "status": "ok",
+          "message": "Description length (88 chars) is within the ideal 70-160 char range.",
+          "details": null
+        },
+        {
+          "id": "canonical.present",
+          "label": "Canonical URL",
+          "status": "ok",
+          "message": "Canonical URL is set to 'http://localhost:8099/index.html'.",
+          "details": null
+        },
+        {
+          "id": "og.partial",
+          "label": "Open Graph Tags",
+          "status": "warning",
+          "message": "Missing Open Graph tags: image, url.",
+          "details": null
+        },
+        {
+          "id": "twitter.missing",
+          "label": "Twitter Card",
+          "status": "warning",
+          "message": "No twitter:card meta tag found.",
+          "details": null
+        }
+      ]
+    },
+    "content_hierarchy": {
+      "h1_count": 2,
+      "heading_counts": {
+        "h1": 2,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "headings": [
+        {
+          "level": 1,
+          "text": "Welcome"
+        },
+        {
+          "level": 1,
+          "text": "Duplicate H1"
+        },
+        {
+          "level": 2,
+          "text": "Section One"
+        }
+      ],
+      "status": "warning",
+      "checks": [
+        {
+          "id": "h1.multiple",
+          "label": "H1 Tag",
+          "status": "warning",
+          "message": "Multiple H1 tags found (2); a page should generally have exactly one.",
+          "details": null
+        }
+      ]
+    },
+    "images": {
+      "total_images": 2,
+      "images_missing_alt": 1,
+      "missing_alt_sources": [
+        "http://127.0.0.1:8099/b.png"
+      ],
+      "status": "warning",
+      "checks": [
+        {
+          "id": "images.alt_missing",
+          "label": "Image Alt Attributes",
+          "status": "warning",
+          "message": "1 of 2 images are missing alt attributes.",
+          "details": null
+        }
+      ]
+    },
+    "technical_files": {
+      "robots_txt_found": true,
+      "robots_txt_status_code": 200,
+      "robots_txt_disallows_all": false,
+      "robots_txt_sitemap_refs": [
+        "http://localhost:8099/sitemap.xml"
+      ],
+      "sitemap_found": true,
+      "sitemap_status_code": 200,
+      "sitemap_url_count": 1,
+      "sitemap_is_valid_xml": true,
+      "status": "ok",
+      "checks": [
+        {
+          "id": "robots.found",
+          "label": "robots.txt",
+          "status": "ok",
+          "message": "robots.txt found and does not block the entire site.",
+          "details": null
+        },
+        {
+          "id": "sitemap.valid",
+          "label": "sitemap.xml",
+          "status": "ok",
+          "message": "sitemap.xml is valid XML and references 1 entries.",
+          "details": null
+        }
+      ]
+    },
+    "performance": {
+      "response_time_ms": 19.43,
+      "http_status_code": 200,
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "status": "ok",
+      "checks": [
+        {
+          "id": "performance.fast",
+          "label": "Response Time",
+          "status": "ok",
+          "message": "Response returned in 19ms.",
+          "details": null
+        }
+      ]
+    },
+    "error": null
+  },
+  "security": {
+    "score": 20,
+    "grade": "F",
+    "ssl": {
+      "is_https": false,
+      "certificate_valid": null,
+      "issuer": null,
+      "subject": null,
+      "valid_from": null,
+      "valid_until": null,
+      "days_until_expiry": null,
+      "protocol_version": null,
+      "status": "fail",
+      "checks": [
+        {
+          "id": "ssl.not_https",
+          "label": "HTTPS",
+          "status": "fail",
+          "message": "Site is not served over HTTPS.",
+          "details": null
+        }
+      ],
+      "error": null
+    },
+    "headers": {
+      "findings": [
+        {
+          "header": "Content-Security-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Mitigates XSS and data-injection attacks by restricting allowed content sources."
+        },
+        {
+          "header": "Strict-Transport-Security",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Forces browsers to use HTTPS, preventing SSL-stripping attacks."
+        },
+        {
+          "header": "X-Frame-Options",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Prevents the page from being embedded in a hostile <iframe> (clickjacking)."
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Prevents MIME-type sniffing that can lead to drive-by downloads/XSS."
+        },
+        {
+          "header": "Referrer-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Controls how much referrer information is leaked to other origins."
+        },
+        {
+          "header": "Permissions-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Restricts which browser features/APIs (camera, geolocation, etc.) the page may use."
+        }
+      ],
+      "grade": "F",
+      "status": "fail"
+    },
+    "cookies": {
+      "total_cookies": 0,
+      "cookies": [],
+      "status": "not_applicable",
+      "checks": [
+        {
+          "id": "cookies.none",
+          "label": "Cookie Security",
+          "status": "not_applicable",
+          "message": "No cookies were set on the initial response.",
+          "details": null
+        }
+      ]
+    },
+    "error": null
+  },
+  "recommendations": [
+    {
+      "id": "sec.https.missing",
+      "severity": "critical",
+      "category": "security",
+      "title": "Serve the site over HTTPS",
+      "description": "The site is not using HTTPS at all, exposing all traffic to interception."
+    },
+    {
+      "id": "sec.header.content-security-policy",
+      "severity": "high",
+      "category": "security",
+      "title": "Add the Content-Security-Policy header",
+      "description": "Missing. Mitigates XSS and data-injection attacks by restricting allowed content sources."
+    },
+    {
+      "id": "sec.header.strict-transport-security",
+      "severity": "high",
+      "category": "security",
+      "title": "Add the Strict-Transport-Security header",
+      "description": "Missing. Forces browsers to use HTTPS, preventing SSL-stripping attacks."
+    },
+    {
+      "id": "seo.h1.multiple",
+      "severity": "medium",
+      "category": "seo",
+      "title": "Reduce to a single H1",
+      "description": "2 H1 tags found; consolidate to one per page."
+    },
+    {
+      "id": "seo.images.alt",
+      "severity": "medium",
+      "category": "seo",
+      "title": "Add alt text to images",
+      "description": "1 of 2 images are missing alt attributes, hurting accessibility and image SEO."
+    },
+    {
+      "id": "sec.header.x-frame-options",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the X-Frame-Options header",
+      "description": "Missing. Prevents the page from being embedded in a hostile <iframe> (clickjacking)."
+    },
+    {
+      "id": "sec.header.x-content-type-options",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the X-Content-Type-Options header",
+      "description": "Missing. Prevents MIME-type sniffing that can lead to drive-by downloads/XSS."
+    },
+    {
+      "id": "sec.header.referrer-policy",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the Referrer-Policy header",
+      "description": "Missing. Controls how much referrer information is leaked to other origins."
+    },
+    {
+      "id": "sec.header.permissions-policy",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the Permissions-Policy header",
+      "description": "Missing. Restricts which browser features/APIs (camera, geolocation, etc.) the page may use."
+    }
+  ],
+  "fatal_error": null
+}
