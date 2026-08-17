@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "target_url": "https://pt.pornhub.com/recommended",
+    "normalized_url": "https://pt.pornhub.com/recommended",
+    "analyzed_at_utc": "2026-08-17T16:24:58.405015+00:00",
+    "tool_version": "1.0.0",
+    "total_duration_ms": 860.4
+  },
+  "overall_status": "error",
+  "seo": {
+    "score": null,
+    "grade": null,
+    "meta_tags": {
+      "title": null,
+      "title_length": null,
+      "title_status": "not_applicable",
+      "description": null,
+      "description_length": null,
+      "description_status": "not_applicable",
+      "canonical_url": null,
+      "canonical_status": "not_applicable",
+      "open_graph": {},
+      "open_graph_status": "not_applicable",
+      "twitter_card": {},
+      "twitter_card_status": "not_applicable",
+      "checks": []
+    },
+    "content_hierarchy": {
+      "h1_count": 0,
+      "heading_counts": {},
+      "headings": [],
+      "status": "not_applicable",
+      "checks": []
+    },
+    "images": {
+      "total_images": 0,
+      "images_missing_alt": 0,
+      "missing_alt_sources": [],
+      "status": "not_applicable",
+      "checks": []
+    },
+    "technical_files": {
+      "robots_txt_found": false,
+      "robots_txt_status_code": null,
+      "robots_txt_disallows_all": false,
+      "robots_txt_sitemap_refs": [],
+      "sitemap_found": false,
+      "sitemap_status_code": null,
+      "sitemap_url_count": null,
+      "sitemap_is_valid_xml": null,
+      "status": "not_applicable",
+      "checks": []
+    },
+    "performance": {
+      "response_time_ms": 151.3,
+      "http_status_code": 410,
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "status": "fail",
+      "checks": [
+        {
+          "id": "performance.http_error",
+          "label": "HTTP Status",
+          "status": "fail",
+          "message": "Page returned HTTP 410.",
+          "details": null
+        }
+      ]
+    },
+    "error": "Page could not be fetched or returned no text content."
+  },
+  "security": {
+    "score": 58,
+    "grade": "F",
+    "ssl": {
+      "is_https": true,
+      "certificate_valid": true,
+      "issuer": "DigiCert Inc",
+      "subject": "AYLO Freesites Ltd",
+      "valid_from": "Dec 29 00:00:00 2025 GMT",
+      "valid_until": "Jan 29 23:59:59 2027 GMT",
+      "days_until_expiry": 165,
+      "protocol_version": "TLSv1.3",
+      "status": "ok",
+      "checks": [
+        {
+          "id": "ssl.valid",
+          "label": "Certificate Expiry",
+          "status": "ok",
+          "message": "Certificate is valid for 165 more day(s), issued by DigiCert Inc.",
+          "details": null
+        }
+      ],
+      "error": null
+    },
+    "headers": {
+      "findings": [
+        {
+          "header": "Content-Security-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Mitigates XSS and data-injection attacks by restricting allowed content sources."
+        },
+        {
+          "header": "Strict-Transport-Security",
+          "present": true,
+          "value": "max-age=63072000; includeSubDomains; preload",
+          "grade_contribution": "ok",
+          "note": "Present. Forces browsers to use HTTPS, preventing SSL-stripping attacks."
+        },
+        {
+          "header": "X-Frame-Options",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Prevents the page from being embedded in a hostile <iframe> (clickjacking)."
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Prevents MIME-type sniffing that can lead to drive-by downloads/XSS."
+        },
+        {
+          "header": "Referrer-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Controls how much referrer information is leaked to other origins."
+        },
+        {
+          "header": "Permissions-Policy",
+          "present": false,
+          "value": null,
+          "grade_contribution": "warning",
+          "note": "Missing. Restricts which browser features/APIs (camera, geolocation, etc.) the page may use."
+        }
+      ],
+      "grade": "F",
+      "status": "warning"
+    },
+    "cookies": {
+      "total_cookies": 1,
+      "cookies": [
+        {
+          "name": "rp",
+          "secure": false,
+          "http_only": true,
+          "same_site": null,
+          "status": "fail",
+          "note": "Multiple issues: missing Secure, SameSite is absent or 'None'."
+        }
+      ],
+      "status": "fail",
+      "checks": [
+        {
+          "id": "cookies.summary",
+          "label": "Cookie Security",
+          "status": "fail",
+          "message": "1 cookie(s) inspected: 0 fully compliant, 0 with partial issues, 1 insecure.",
+          "details": null
+        }
+      ]
+    },
+    "error": null
+  },
+  "recommendations": [
+    {
+      "id": "seo.h1.missing",
+      "severity": "high",
+      "category": "seo",
+      "title": "Add an H1 tag",
+      "description": "The page has no H1 heading, hurting both SEO and accessibility."
+    },
+    {
+      "id": "sec.header.content-security-policy",
+      "severity": "high",
+      "category": "security",
+      "title": "Add the Content-Security-Policy header",
+      "description": "Missing. Mitigates XSS and data-injection attacks by restricting allowed content sources."
+    },
+    {
+      "id": "seo.sitemap.missing",
+      "severity": "medium",
+      "category": "seo",
+      "title": "Add an XML sitemap",
+      "description": "No sitemap.xml was found; a sitemap helps search engines discover all pages."
+    },
+    {
+      "id": "sec.header.x-frame-options",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the X-Frame-Options header",
+      "description": "Missing. Prevents the page from being embedded in a hostile <iframe> (clickjacking)."
+    },
+    {
+      "id": "sec.header.x-content-type-options",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the X-Content-Type-Options header",
+      "description": "Missing. Prevents MIME-type sniffing that can lead to drive-by downloads/XSS."
+    },
+    {
+      "id": "sec.header.referrer-policy",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the Referrer-Policy header",
+      "description": "Missing. Controls how much referrer information is leaked to other origins."
+    },
+    {
+      "id": "sec.header.permissions-policy",
+      "severity": "medium",
+      "category": "security",
+      "title": "Add the Permissions-Policy header",
+      "description": "Missing. Restricts which browser features/APIs (camera, geolocation, etc.) the page may use."
+    },
+    {
+      "id": "sec.cookie.rp",
+      "severity": "medium",
+      "category": "security",
+      "title": "Harden cookie 'rp'",
+      "description": "Multiple issues: missing Secure, SameSite is absent or 'None'."
+    },
+    {
+      "id": "seo.robots.missing",
+      "severity": "low",
+      "category": "seo",
+      "title": "Add a robots.txt file",
+      "description": "No robots.txt was found; add one to guide crawler behavior explicitly."
+    }
+  ],
+  "fatal_error": null
+}

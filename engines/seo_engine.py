@@ -9,6 +9,7 @@ or network failure inside one sub-check never prevents the others from
 running, and always leaves a Status.ERROR trail in the output rather
 than raising.
 """
+
 from __future__ import annotations
 
 from urllib.parse import urljoin, urlparse

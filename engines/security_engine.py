@@ -11,6 +11,7 @@ authorization, which a CLI tool handed to end users must be.
 Fully independent of the SEO engine; the only thing shared is the
 HttpClient and the base URL string.
 """
+
 from __future__ import annotations
 
 import socket
